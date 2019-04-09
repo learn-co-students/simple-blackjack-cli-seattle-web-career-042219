@@ -68,11 +68,11 @@ end
 
 def runner
   # code runner here
+  welcome
+  limit = initial_round
 
-  limit = 0
   until limit > 21
-    welcome
-    limit = display_card_total(hit?(initial_round))
+    limit = display_card_total(hit?(limit))
   end
   end_game(limit)
 end
